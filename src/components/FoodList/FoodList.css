@@ -13,7 +13,7 @@
 }
 .main_div > div {
   border: 3px solid silver;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .main_div > div:hover {
   cursor: pointer;

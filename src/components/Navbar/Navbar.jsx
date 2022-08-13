@@ -5,6 +5,9 @@ export const Navbar = () => {
   return (
     <div className="nav">
       <h2 onClick={() => navigate("/")}>TheFoodList</h2>
+      <h2 onClick={() => navigate("/favourite")}>Favourite</h2>
+
+      
     </div>
   );
 };
