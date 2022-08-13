@@ -10,18 +10,25 @@ export const Food = () => {
     axios
       .get("https://alokkumar-dev.github.io/json-repo/OFF_subset17.json")
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setItem(res.data);
       });
+      getData();
   }, []);
+
+  const getData = async()=>{
+    const response = await fetch("./OFF_subset17.json");
+    const data = await response.json();
+    console.log("fetch data",data);
+  }
   const handleSort = () => {
     let x = item.sort((a, b) => a.product_name.localeCompare(b.product_name));
-    console.log(x);
+    // console.log(x);
     setItem([...x]);
   };
 
   return (
-    <>
+    <div className="container">
       <div className="sortDiv">
         <button onClick={()=>handleSort()}>Sorting</button>
         <select name="" id="">
@@ -43,6 +50,6 @@ export const Food = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };

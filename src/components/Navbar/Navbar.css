@@ -5,13 +5,13 @@
     font-family: sans-serif;
 }
 .nav{
-    border: 2px transparent red;
     width: 100%;
-    display: flex;
-    justify-items: start;
+    z-index: 1000;
+    position: fixed;
     padding: 15px 20px;
     background-color: rgb(69, 128, 69);
 }
 .nav>h2:hover{
     cursor: pointer;
+    width: fit-content;
 }
