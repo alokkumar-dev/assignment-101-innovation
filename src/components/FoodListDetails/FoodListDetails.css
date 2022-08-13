@@ -1,0 +1,28 @@
+.upper_div>div{
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 20px;
+    
+}
+.upper_div{
+    margin: auto;
+    width: 66%;
+}
+tr,th,td,thead,tbody{
+    border: 2px solid gray;
+    padding: 3px;
+}
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 66%;
+}
+@media only screen and (max-width: 600px) {
+    .upper_div{
+        margin: auto;
+        width: 98%;
+    }
+    table{
+        width: 100%;
+    }
+  }
