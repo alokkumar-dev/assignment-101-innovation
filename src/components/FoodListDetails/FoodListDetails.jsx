@@ -9,14 +9,14 @@ export const FoodDetails = () => {
 //   console.log(code);
 
   useEffect(() => {
-    axios.get(`https://alokkumar-dev.github.io/json-repo/OFF_subset17.json`).then((res) => {
-      //  console.log(res.data);
-
-       let ans = res.data.filter((e)=>e.code ==code)
-      //  console.log(ans)
-       setItem(ans[0]);
-    });
+    getDetailsData();
   }, []);
+  const getDetailsData = async()=>{
+    const response = await fetch("./OFF_subset17.json");
+    const data = await response.json();
+    let ans = data.filter((e)=> e.code == code);
+    setItem(ans[0])
+  }
   return (
     <div className="upper_div">
       <div>

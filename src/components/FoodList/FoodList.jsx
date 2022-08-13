@@ -1,42 +1,39 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import icon from "../../assests/icon.png";
+import { getData } from "../../Redux/ActionType";
 import "./FoodList.css";
 export const Food = () => {
-  const [item, setItem] = useState([]);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { data } = useSelector((store) => store);
+  
   useEffect(() => {
-    axios
-      .get("https://alokkumar-dev.github.io/json-repo/OFF_subset17.json")
-      .then((res) => {
-        // console.log(res.data);
-        setItem(res.data);
-      });
-      getData();
+    getFoodData();
   }, []);
 
-  const getData = async()=>{
+  const getFoodData = async () => {
     const response = await fetch("./OFF_subset17.json");
     const data = await response.json();
-    console.log("fetch data",data);
-  }
+    dispatch(getData([...data]));
+  };
   const handleSort = () => {
-    let x = item.sort((a, b) => a.product_name.localeCompare(b.product_name));
-    // console.log(x);
-    setItem([...x]);
+    let sorting = data.sort((a, b) => a.product_name.localeCompare(b.product_name));
+    dispatch(getData([...sorting]));
   };
 
   return (
     <div className="container">
       <div className="sortDiv">
-        <button onClick={()=>handleSort()}>Sorting</button>
+        <button onClick={() => handleSort()}>Sorting</button>
         <select name="" id="">
-            <option value=""></option>
+          <option value=""></option>
         </select>
       </div>
       <div className="main_div">
-        {item.map((e) => (
+        {data.map((e) => (
           <div onClick={() => navigate(`food/${e.code}`)} key={e.code}>
             <div>
               <img src={icon} alt="icon" />
