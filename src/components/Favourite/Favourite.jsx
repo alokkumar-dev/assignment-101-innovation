@@ -30,7 +30,7 @@ export const Favourite = () => {
         <div className="container">
           <div className="sortDiv">
             <button onClick={() => handleSort()} className="sortingBtn">
-              Sort by Alphabetic
+              Sorting
             </button>
           </div>
           <div className="main_div">
