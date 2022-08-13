@@ -9,7 +9,7 @@ export const Food = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { data } = useSelector((store) => store);
-  
+
   useEffect(() => {
     getFoodData();
   }, []);
@@ -20,17 +20,18 @@ export const Food = () => {
     dispatch(getData([...data]));
   };
   const handleSort = () => {
-    let sorting = data.sort((a, b) => a.product_name.localeCompare(b.product_name));
+    let sorting = data.sort((a, b) =>
+      a.product_name.localeCompare(b.product_name)
+    );
     dispatch(getData([...sorting]));
   };
 
   return (
     <div className="container">
       <div className="sortDiv">
-        <button onClick={() => handleSort()}>Sorting</button>
-        <select name="" id="">
-          <option value=""></option>
-        </select>
+        <button onClick={() => handleSort()} className="sortingBtn">
+          Sorting
+        </button>
       </div>
       <div className="main_div">
         {data.map((e) => (

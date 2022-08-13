@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.subNavCont {
+  width: 100%;
+  display: flex;
+  font-family: sans-serif;
+  height: 40px;
+  border-bottom: 1px solid;
+}
+.listBtn {
+  flex: 1;
+  font-size: 20px;
+  border: none;
+  background-color: #a4cb88;
+  cursor: pointer;
+}
+.favBtn {
+  flex: 1;
+  font-size: 20px;
+  border: none;
+  background-color: #a4cb88;
+  cursor: pointer;
+}
+.listBtn:focus,
+.favBtn:focus {
+  color: #029dfd;
+  background-color: transparent;
+  text-decoration: underline 5px #029dfd;
+}

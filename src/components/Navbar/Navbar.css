@@ -1,19 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.nav{
-    width: 100%;
-    z-index: 1000;
-    /* position: fixed; */
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    background-color: rgb(69, 128, 69);
+.nav {
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #a1c399;
 }
-.nav>h2:hover{
-    cursor: pointer;
-    width: fit-content;
+.nav > h2:hover {
+  cursor: pointer;
+  width: fit-content;
 }

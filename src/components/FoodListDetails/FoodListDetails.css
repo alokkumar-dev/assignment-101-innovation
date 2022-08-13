@@ -1,27 +1,39 @@
-.upper_div>div{
-    display: flex;
-    gap: 20px;
-    
+.upper_div > div {
+  display: flex;
+  gap: 20px;
 }
-.upper_div{
-    margin: auto;
-    width: 66%;
+.upper_div {
+  margin: auto;
+  width: 66%;
 }
-tr,th,td,thead,tbody{
-    border: 2px solid gray;
-    padding: 3px;
+tr,
+th,
+td,
+thead,
+tbody {
+  border: 2px solid gray;
+  padding: 3px;
 }
-table{
-    margin-top: 20px;
-    border-collapse: collapse;
-    width: 66%;
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 66%;
 }
 @media only screen and (max-width: 600px) {
-    .upper_div{
-        margin: auto;
-        width: 98%;
-    }
-    table{
-        width: 100%;
-    }
+  .upper_div {
+    margin: auto;
+    width: 98%;
   }
+  table {
+    width: 100%;
+  }
+}
+.addFavBtn {
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #c300ff;
+  margin-left: 50%;
+}

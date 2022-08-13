@@ -29,7 +29,9 @@ export const FoodDetails = () => {
     <>
       {data.length > 0 ? (
         <div className="upper_div">
-          <button onClick={(e) => addFavourite(e)} className="favBtn">Favourite</button>
+          <button onClick={(e) => addFavourite(e)} className="addFavBtn">
+            Add Favourite
+          </button>
           <div>
             <div>
               <img src={icon} alt="icon" />
