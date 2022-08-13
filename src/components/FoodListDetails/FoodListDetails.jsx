@@ -10,7 +10,7 @@ export const FoodDetails = () => {
 
   useEffect(() => {
     axios.get(`https://alokkumar-dev.github.io/json-repo/OFF_subset17.json`).then((res) => {
-      //  console.log(res.data.data);
+      //  console.log(res.data);
 
        let ans = res.data.filter((e)=>e.code ==code)
       //  console.log(ans)
