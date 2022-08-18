@@ -1,15 +1,11 @@
-
-// import './App.css'
-
-import { AllRoutes } from "./components/Routes/Routes"
+import { AllRoutes } from "./components/Routes/Routes";
 
 function App() {
-
   return (
     <div className="App">
-    <AllRoutes />
+      <AllRoutes />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

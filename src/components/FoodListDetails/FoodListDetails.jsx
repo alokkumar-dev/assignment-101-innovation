@@ -3,7 +3,6 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import icon from "../../assests/icon.png";
 import "./FoodListDetails.css";
-import { Food } from "../FoodList/FoodList";
 import { getFavourite } from "../../Redux/ActionType";
 export const FoodDetails = () => {
   const [item, setItem] = useState({});

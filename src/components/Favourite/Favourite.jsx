@@ -34,7 +34,7 @@ export const Favourite = () => {
             </button>
           </div>
           <div className="main_div">
-            {favData.map((e) => (
+            { favData.map((e) => (
               <div onClick={() => navigate(`favourite/${e.code}`)} key={e.code}>
                 <div>
                   <img src={icon} alt="icon" />
