@@ -25,5 +25,8 @@ const filterData = (data, value) => {
   if (value == "javichu" || value == "openfoodfacts-contributors") {
     newData = data.filter((e) => e.creator == value);
   }
+  if(value == ""){
+    newData = data;
+  }
   return newData;
 };

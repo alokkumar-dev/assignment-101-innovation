@@ -19,11 +19,20 @@ export const Food = () => {
     const data = await response.json();
     dispatch(getData([...data]));
   };
-  const handleSort = () => {
-    let sorting = data.sort((a, b) =>
-      a.product_name.localeCompare(b.product_name)
-    );
-    dispatch(getData([...sorting]));
+  const handleSort = (e) => {
+    const value = e.target.value;
+    if (value == "asc") {
+      let sorting = data.sort((a, b) =>
+        a.product_name.localeCompare(b.product_name)
+      );
+      dispatch(getData([...sorting]));
+    }
+    if (value == "desc") {
+      let sorting = data.sort((a, b) =>
+        b.product_name.localeCompare(a.product_name)
+      );
+      dispatch(getData([...sorting]));
+    }
   };
   const handleFilter = (e) => {
     const { id, value } = e.target;
@@ -35,15 +44,15 @@ export const Food = () => {
   return (
     <div className="container">
       <div className="sortDiv">
-        <button onClick={() => handleSort()} className="sortingBtn">
-          Sorting
-        </button>
+        <select name="" id="sorting" onChange={handleSort}>
+          <option value="">Sort By</option>
+          <option value="asc">Asc Order</option>
+          <option value="desc">Desc Order</option>
+        </select>
         <select name="" id="filter" onChange={handleFilter}>
           <option value="">filter by creator</option>
           <option value="javichu">javichu</option>
-          <option value="openfoodfacts-contributors">
-            openfoodfacts-contributors
-          </option>
+          <option value="openfoodfacts-contributors">openfoodfacts</option>
         </select>
       </div>
       <div className="main_div">
